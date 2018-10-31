@@ -207,7 +207,7 @@ static int aspeed_sig_expr_set(const struct aspeed_sig_expr *expr,
 		 * reset.
 		 */
 		if (desc->ip == ASPEED_IP_SCU && desc->reg == HW_STRAP1 &&
-		    !(desc->mask & (BIT(21) | BIT(22))))
+		    !(desc->mask & (BIT(21) | BIT(22) | BIT(19))))
 			continue;
 
 		if (desc->ip == ASPEED_IP_SCU && desc->reg == HW_STRAP2)
